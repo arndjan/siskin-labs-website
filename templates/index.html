@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Siskin Labs — {{ t('hero_title') }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero__title">{{ t('hero_title') }}</h1>
+        <p class="hero__subtitle">{{ t('hero_subtitle') }}</p>
+        <a href="#products" class="hero__cta">{{ t('hero_cta') }}</a>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="section">
+    <div class="container">
+        <div class="section__label">{{ t('products_title') }}</div>
+        <div class="products">
+            <!-- Perch -->
+            <div class="product-card">
+                <span class="product-card__badge">Alpha</span>
+                <div class="product-card__icon">P</div>
+                <h2 class="product-card__name">Perch</h2>
+                <p class="product-card__tagline">{{ t('perch_tagline') }}</p>
+                <p class="product-card__desc">{{ t('perch_description') }}</p>
+                <ul class="product-card__features">
+                    <li>{{ t('perch_feature_1') }}</li>
+                    <li>{{ t('perch_feature_2') }}</li>
+                    <li>{{ t('perch_feature_3') }}</li>
+                    <li>{{ t('perch_feature_4') }}</li>
+                </ul>
+                <div class="product-card__actions">
+                    <a href="/perch" class="btn btn--primary">{{ t('learn_more') }}</a>
+                    <a href="/perch#demo" class="btn btn--outline">{{ t('try_demo') }}</a>
+                </div>
+            </div>
+
+            <!-- Cache -->
+            <div class="product-card">
+                <span class="product-card__badge product-card__badge--dev">{{ t('coming_soon') }}</span>
+                <div class="product-card__icon">C</div>
+                <h2 class="product-card__name">Cache</h2>
+                <p class="product-card__tagline">{{ t('cache_tagline') }}</p>
+                <p class="product-card__desc">{{ t('cache_description') }}</p>
+                <ul class="product-card__features">
+                    <li>{{ t('cache_feature_1') }}</li>
+                    <li>{{ t('cache_feature_2') }}</li>
+                    <li>{{ t('cache_feature_3') }}</li>
+                    <li>{{ t('cache_feature_4') }}</li>
+                </ul>
+                <div class="product-card__actions">
+                    <a href="/cache" class="btn btn--primary">{{ t('learn_more') }}</a>
+                    <a href="/waitlist" class="btn btn--outline">{{ t('nav_waitlist') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="about">
+            <div class="about__text">
+                <div class="section__label">Siskin Labs</div>
+                <h2 class="section__title">{{ t('about_title') }}</h2>
+                <p>{{ t('about_text') }}</p>
+            </div>
+            <div class="about__visual">
+                <img src="/static/siskin-logo.png" alt="Siskin Labs">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

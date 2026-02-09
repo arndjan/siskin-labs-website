@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('subscribe_title') }} | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container container--narrow">
+        <h1 class="hero__title">{{ t('subscribe_title') }}</h1>
+        <p class="hero__subtitle" style="margin-bottom: 2.5rem;">{{ t('subscribe_subtitle') }}</p>
+
+        <form class="waitlist-form"
+              hx-post="/subscribe"
+              hx-target="#subscribe-result"
+              hx-swap="innerHTML">
+
+            <div class="form-group">
+                <label for="email">{{ t('subscribe_email') }}</label>
+                <input type="email" id="email" name="email" required
+                       placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="name">{{ t('subscribe_name') }}</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="interests">{{ t('subscribe_interests') }}</label>
+                <select id="interests" name="interests">
+                    <option value="all">{{ t('subscribe_all') }}</option>
+                    <option value="perch">Perch</option>
+                    <option value="cache">Cache</option>
+                    <option value="announcements">{{ t('subscribe_announcements') }}</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--large btn--full">
+                {{ t('subscribe_submit') }}
+            </button>
+        </form>
+
+        <div id="subscribe-result"></div>
+    </div>
+</section>
+{% endblock %}

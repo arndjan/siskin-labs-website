@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}{{ newsletter.subject_en }} — Admin | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container" style="max-width: 760px;">
+        <div style="margin-bottom: 2rem;">
+            <a href="/admin/newsletters" style="color: var(--text-muted); font-size: 0.9rem;">&larr; Back to newsletters</a>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+            <div>
+                <span class="nl-status nl-status--{{ newsletter.status }}">{{ newsletter.status }}</span>
+                <h1 class="section__title" style="margin-top: 0.5rem;">{{ newsletter.subject_en }}</h1>
+                <p style="color: var(--text-muted);">{{ newsletter.subject_nl }}</p>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="nl-stats">
+            <div class="nl-stat">
+                <div class="nl-stat__label">Target</div>
+                <div class="nl-stat__value">{{ newsletter.target }}</div>
+            </div>
+            <div class="nl-stat">
+                <div class="nl-stat__label">Recipients</div>
+                <div class="nl-stat__value">{{ target_count }}</div>
+            </div>
+            <div class="nl-stat">
+                <div class="nl-stat__label">Created</div>
+                <div class="nl-stat__value">{{ newsletter.created_at[:10] }}</div>
+            </div>
+            {% if newsletter.sent_at %}
+            <div class="nl-stat">
+                <div class="nl-stat__label">Sent</div>
+                <div class="nl-stat__value">{{ newsletter.sent_at[:10] }} ({{ newsletter.sent_count }})</div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Preview -->
+        <div style="margin: 2rem 0;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">Preview (English)</h3>
+            <div class="nl-preview">
+                {{ newsletter.body_en | safe }}
+            </div>
+        </div>
+
+        <div style="margin: 2rem 0;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">Preview (Nederlands)</h3>
+            <div class="nl-preview">
+                {{ newsletter.body_nl | safe }}
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            {% if newsletter.status == 'draft' %}
+            <a href="/admin/newsletters/{{ newsletter.id }}/edit" class="btn btn--outline">Edit</a>
+            <a href="/admin/newsletters/{{ newsletter.id }}/preview" class="btn btn--outline" target="_blank">Email preview</a>
+            <form method="POST" action="/admin/newsletters/{{ newsletter.id }}/schedule" style="display:inline;">
+                <button type="submit" class="btn btn--primary">Schedule</button>
+            </form>
+            <form method="POST" action="/admin/newsletters/{{ newsletter.id }}/delete" style="display:inline;"
+                  onsubmit="return confirm('Delete this draft?')">
+                <button type="submit" class="btn btn--outline" style="color: var(--danger); border-color: var(--danger);">Delete</button>
+            </form>
+            {% elif newsletter.status == 'scheduled' %}
+            <a href="/admin/newsletters/{{ newsletter.id }}/preview" class="btn btn--outline" target="_blank">Email preview</a>
+            <form method="POST" action="/admin/newsletters/{{ newsletter.id }}/send" style="display:inline;"
+                  onsubmit="return confirm('Send this newsletter to {{ target_count }} subscriber(s)?')">
+                <button type="submit" class="btn btn--primary">Send now ({{ target_count }})</button>
+            </form>
+            {% elif newsletter.status == 'sent' %}
+            <a href="/admin/newsletters/{{ newsletter.id }}/preview" class="btn btn--outline" target="_blank">Email preview</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .nl-status {
+        font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem;
+        border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .nl-status--draft { background: #f3f4f6; color: #6b7280; }
+    .nl-status--scheduled { background: #fef3c7; color: #92400e; }
+    .nl-status--sent { background: #d1fae5; color: #065f46; }
+    .nl-stats {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem; padding: 1rem; background: var(--bg-warm);
+        border-radius: var(--radius); border: 1px solid var(--border);
+    }
+    .nl-stat__label { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+    .nl-stat__value { font-weight: 600; font-size: 0.95rem; }
+    .nl-preview {
+        padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius);
+        background: var(--bg); font-size: 0.95rem; line-height: 1.65;
+    }
+    .nl-preview h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .nl-preview p { margin-bottom: 0.75rem; color: var(--text-muted); }
+    .nl-preview a { color: var(--text); text-decoration: underline; }
+    :root { --danger: #dc3545; }
+</style>
+{% endblock %}

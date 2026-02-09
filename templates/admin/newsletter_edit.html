@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'Edit' if newsletter else 'New' }} Newsletter — Admin | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container" style="max-width: 760px;">
+        <div style="margin-bottom: 2rem;">
+            <a href="/admin/newsletters" style="color: var(--text-muted); font-size: 0.9rem;">&larr; Back to newsletters</a>
+        </div>
+
+        <h1 class="section__title">{{ 'Edit' if newsletter else 'New' }} Newsletter</h1>
+        <div style="margin-bottom: 2rem;"></div>
+
+        <form method="POST" action="/admin/newsletters/{{ newsletter.id ~ '/edit' if newsletter else 'new' }}">
+            <!-- Target audience -->
+            <div class="form-group">
+                <label for="target">Target audience</label>
+                <select id="target" name="target">
+                    <option value="all" {{ 'selected' if not newsletter or newsletter.target == 'all' else '' }}>All subscribers</option>
+                    <option value="perch" {{ 'selected' if newsletter and newsletter.target == 'perch' else '' }}>Perch interested</option>
+                    <option value="cache" {{ 'selected' if newsletter and newsletter.target == 'cache' else '' }}>Cache interested</option>
+                    <option value="announcements" {{ 'selected' if newsletter and newsletter.target == 'announcements' else '' }}>Announcements only</option>
+                </select>
+            </div>
+
+            <!-- English version -->
+            <fieldset style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;">
+                <legend style="font-weight: 700; padding: 0 0.5rem;">English</legend>
+                <div class="form-group">
+                    <label for="subject_en">Subject</label>
+                    <input type="text" id="subject_en" name="subject_en" required
+                           value="{{ newsletter.subject_en if newsletter else '' }}"
+                           placeholder="Your newsletter subject line">
+                </div>
+                <div class="form-group">
+                    <label for="body_en">Body (HTML)</label>
+                    <textarea id="body_en" name="body_en" required
+                              rows="12" style="width: 100%; padding: 0.65rem 0.85rem; border: 1.5px solid var(--border); border-radius: 6px; font-family: 'SF Mono', Monaco, Menlo, monospace; font-size: 0.85rem; line-height: 1.5; resize: vertical;"
+                              placeholder="<h2>Title</h2><p>Your content here...</p>">{{ newsletter.body_en if newsletter else '' }}</textarea>
+                </div>
+            </fieldset>
+
+            <!-- Dutch version -->
+            <fieldset style="border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;">
+                <legend style="font-weight: 700; padding: 0 0.5rem;">Nederlands</legend>
+                <div class="form-group">
+                    <label for="subject_nl">Onderwerp</label>
+                    <input type="text" id="subject_nl" name="subject_nl" required
+                           value="{{ newsletter.subject_nl if newsletter else '' }}"
+                           placeholder="Je nieuwsbrief onderwerp">
+                </div>
+                <div class="form-group">
+                    <label for="body_nl">Inhoud (HTML)</label>
+                    <textarea id="body_nl" name="body_nl" required
+                              rows="12" style="width: 100%; padding: 0.65rem 0.85rem; border: 1.5px solid var(--border); border-radius: 6px; font-family: 'SF Mono', Monaco, Menlo, monospace; font-size: 0.85rem; line-height: 1.5; resize: vertical;"
+                              placeholder="<h2>Titel</h2><p>Je inhoud hier...</p>">{{ newsletter.body_nl if newsletter else '' }}</textarea>
+                </div>
+            </fieldset>
+
+            <div style="display: flex; gap: 0.75rem;">
+                <button type="submit" class="btn btn--primary btn--large">
+                    {{ 'Save changes' if newsletter else 'Create draft' }}
+                </button>
+                <a href="/admin/newsletters{{ '/' ~ newsletter.id if newsletter else '' }}" class="btn btn--outline btn--large">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

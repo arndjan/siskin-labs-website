@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Cache — {{ t('cache_tagline') }} | Siskin Labs{% endblock %}
+{% block description %}{{ t('cache_hero_subtitle') }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--dev"><span class="status__dot"></span> {{ t('coming_soon') }}</span>
+        <h1 class="hero__title">{{ t('cache_hero_title') }}</h1>
+        <p class="hero__subtitle">{{ t('cache_hero_subtitle') }}</p>
+        <a href="/waitlist" class="hero__cta">{{ t('nav_waitlist') }}</a>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Cache</div>
+        <h2 class="section__title">{{ t('cache_vision_title') }}</h2>
+        <div style="margin-bottom: 1.5rem;"></div>
+        <ul class="vision-list">
+            <li>{{ t('cache_vision_1') }}</li>
+            <li>{{ t('cache_vision_2') }}</li>
+            <li>{{ t('cache_vision_3') }}</li>
+            <li>{{ t('cache_vision_4') }}</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Status -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">{{ t('cache_status_title') }}</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">{{ t('cache_status_text') }}</p>
+        <a href="/waitlist" class="btn btn--primary btn--large">{{ t('nav_waitlist') }}</a>
+    </div>
+</section>
+{% endblock %}

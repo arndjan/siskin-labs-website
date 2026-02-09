@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Perch — {{ t('perch_tagline') }} | Siskin Labs{% endblock %}
+{% block description %}{{ t('perch_hero_subtitle') }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">{{ t('perch_hero_title') }}</h1>
+        <p class="hero__subtitle">{{ t('perch_hero_subtitle') }}</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">{{ t('try_demo') }}</a>
+            <a href="/waitlist" class="btn btn--outline btn--large">{{ t('perch_access_title') }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Perch</div>
+        <h2 class="section__title">{{ t('perch_how_title') }}</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">{{ t('perch_how_1') }}</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">{{ t('perch_how_2') }}</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">{{ t('perch_how_3') }}</div>
+            </div>
+        </div>
+        <div class="highlight">
+            <p class="highlight__text">
+                {% if lang == 'nl' %}"Koffie gehad met Anna van Bakkerij Jansen over hun nieuwe website"{% else %}"Had coffee with Anna from Bakery Jensen about their new website"{% endif %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">{{ t('perch_features_title') }}</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_chat') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_chat_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_relations') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_relations_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_contacts') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_contacts_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_tags') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_tags_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_mobile') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_mobile_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('perch_feat_multi') }}</h3>
+                <p class="feature-card__desc">{{ t('perch_feat_multi_desc') }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section section--accent">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">{{ t('perch_demo_title') }}</h2>
+            <p class="demo-box__text">{{ t('perch_demo_text') }}</p>
+            <a href="https://perch-crm.fly.dev/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                {{ t('perch_demo_btn') }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">{{ t('perch_access_title') }}</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">{{ t('perch_access_text') }}</p>
+        <a href="/waitlist" class="btn btn--primary btn--large">{{ t('nav_waitlist') }}</a>
+    </div>
+</section>
+{% endblock %}

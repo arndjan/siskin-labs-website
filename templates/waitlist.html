@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('waitlist_title') }} | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container container--narrow">
+        <h1 class="hero__title">{{ t('waitlist_title') }}</h1>
+        <p class="hero__subtitle" style="margin-bottom: 2.5rem;">{{ t('waitlist_subtitle') }}</p>
+
+        <form class="waitlist-form"
+              hx-post="/waitlist"
+              hx-target="#waitlist-result"
+              hx-swap="innerHTML">
+
+            <div class="form-group">
+                <label for="email">{{ t('waitlist_email') }}</label>
+                <input type="email" id="email" name="email" required
+                       placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="name">{{ t('waitlist_name') }}</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="product">{{ t('waitlist_product') }}</label>
+                <select id="product" name="product">
+                    <option value="both">{{ t('waitlist_both') }} (Perch & Cache)</option>
+                    <option value="perch">Perch</option>
+                    <option value="cache">Cache</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--large btn--full">
+                {{ t('waitlist_submit') }}
+            </button>
+        </form>
+
+        <div id="waitlist-result"></div>
+    </div>
+</section>
+{% endblock %}

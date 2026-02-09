@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Siskin Labs{% endblock %}</title>
+    <meta name="description" content="{% block description %}Siskin Labs builds lightweight, intelligent software for professionals.{% endblock %}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/static/siskin-icon.png" alt="Siskin">
+                Siskin Labs
+            </a>
+
+            <button class="nav__toggle" onclick="document.querySelector('.nav').classList.toggle('nav--open')" aria-label="Menu">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav class="nav">
+                <a href="/perch" class="nav__link {% if active == 'perch' %}nav__link--active{% endif %}">Perch</a>
+                <a href="/cache" class="nav__link {% if active == 'cache' %}nav__link--active{% endif %}">Cache</a>
+                <a href="/waitlist" class="nav__cta">{{ t('nav_waitlist') }}</a>
+                <a href="/lang/{{ other_lang }}" class="nav__lang">{{ other_lang_label }}</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__name">Siskin Labs</div>
+                    <div class="footer__tagline">{{ t('footer_tagline') }}</div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>{{ t('footer_products') }}</h4>
+                        <a href="/perch">Perch</a>
+                        <a href="/cache">Cache</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>{{ t('footer_company') }}</h4>
+                        <a href="mailto:hello@siskin.amsterdam">{{ t('footer_contact') }}</a>
+                        <a href="/subscribe">{{ t('footer_newsletter') }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2025 {{ t('footer_copyright') }}
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
