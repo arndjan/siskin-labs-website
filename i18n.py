@@ -11,6 +11,7 @@ TRANSLATIONS = {
     "nav_home": {"en": "Home", "nl": "Home"},
     "nav_perch": {"en": "Perch", "nl": "Perch"},
     "nav_cache": {"en": "Cache", "nl": "Cache"},
+    "nav_dash": {"en": "Dash", "nl": "Dash"},
     "nav_waitlist": {"en": "Join Waitlist", "nl": "Wachtlijst"},
     "nav_login": {"en": "Log in", "nl": "Inloggen"},
 
@@ -21,7 +22,7 @@ TRANSLATIONS = {
     },
     "hero_subtitle": {
         "en": "Siskin Labs builds lightweight, intelligent software for professionals who value their time.",
-        "nl": "Siskin Labs bouwt lichtgewicht, intelligente software voor professionals die hun tijd waarderen.",
+        "nl": "Siskin Labs bouwt lichtgewicht, intelligente software voor professionals die hun tijd graag slim besteden.",
     },
     "hero_cta": {"en": "Explore our tools", "nl": "Ontdek onze tools"},
 
@@ -52,6 +53,19 @@ TRANSLATIONS = {
     "cache_feature_2": {"en": "Instant retrieval", "nl": "Direct terugvinden"},
     "cache_feature_3": {"en": "Connected notes", "nl": "Verbonden notities"},
     "cache_feature_4": {"en": "API integrations", "nl": "API-integraties"},
+
+    "dash_tagline": {
+        "en": "Financial dashboard for freelancers",
+        "nl": "Financieel dashboard voor freelancers",
+    },
+    "dash_description": {
+        "en": "Track time, send invoices, and stay on top of your finances. Built for freelancers and small business owners who want simplicity without sacrificing power.",
+        "nl": "Registreer uren, verstuur facturen en houd je financiën bij. Gebouwd voor freelancers en kleine ondernemers die eenvoud willen zonder in te leveren op mogelijkheden.",
+    },
+    "dash_feature_1": {"en": "Time tracking", "nl": "Urenregistratie"},
+    "dash_feature_2": {"en": "Invoicing with PDF", "nl": "Facturatie met PDF"},
+    "dash_feature_3": {"en": "Bank integration", "nl": "Bank-integratie"},
+    "dash_feature_4": {"en": "VAT overview", "nl": "BTW-overzicht"},
 
     "learn_more": {"en": "Learn more", "nl": "Meer info"},
     "try_demo": {"en": "Try the demo", "nl": "Probeer de demo"},
@@ -160,6 +174,82 @@ TRANSLATIONS = {
         "en": "Privacy-first — your data stays yours",
         "nl": "Privacy-first — jouw data blijft van jou",
     },
+    "cache_demo_title": {"en": "Try Cache", "nl": "Probeer Cache"},
+    "cache_demo_text": {
+        "en": "Explore the demo environment — no account needed.",
+        "nl": "Verken de demo-omgeving — geen account nodig.",
+    },
+    "cache_demo_btn": {"en": "Open demo", "nl": "Open demo"},
+    "cache_access_title": {"en": "Get access", "nl": "Toegang krijgen"},
+    "cache_access_text": {
+        "en": "Cache is currently in private alpha. Join the waitlist to get early access.",
+        "nl": "Cache is momenteel in private alpha. Schrijf je in op de wachtlijst voor vroege toegang.",
+    },
+
+    # --- Dash product page ---
+    "dash_hero_title": {
+        "en": "Your finances, simplified",
+        "nl": "Jouw financiën, vereenvoudigd",
+    },
+    "dash_hero_subtitle": {
+        "en": "Dash is a lightweight financial dashboard built for freelancers and small business owners who want to spend less time on admin and more time on what matters.",
+        "nl": "Dash is een lichtgewicht financieel dashboard gebouwd voor freelancers en kleine ondernemers die minder tijd willen besteden aan administratie en meer aan wat ertoe doet.",
+    },
+    "dash_how_title": {"en": "How it works", "nl": "Hoe het werkt"},
+    "dash_how_1": {
+        "en": "Track your hours per project with a simple weekly view",
+        "nl": "Registreer je uren per project met een simpel weekoverzicht",
+    },
+    "dash_how_2": {
+        "en": "Generate professional invoices with one click",
+        "nl": "Genereer professionele facturen met één klik",
+    },
+    "dash_how_3": {
+        "en": "Connect your bank to automatically match payments",
+        "nl": "Koppel je bank om betalingen automatisch te matchen",
+    },
+    "dash_features_title": {"en": "Features", "nl": "Features"},
+    "dash_feat_time": {"en": "Time tracking", "nl": "Urenregistratie"},
+    "dash_feat_time_desc": {
+        "en": "Log hours per project with a clean weekly view. No clutter, just what you need.",
+        "nl": "Log uren per project met een overzichtelijke weekweergave. Geen rommel, alleen wat je nodig hebt.",
+    },
+    "dash_feat_invoices": {"en": "Invoicing", "nl": "Facturatie"},
+    "dash_feat_invoices_desc": {
+        "en": "Create and send professional PDF invoices. Track payment status at a glance.",
+        "nl": "Maak en verstuur professionele PDF-facturen. Zie direct de betaalstatus.",
+    },
+    "dash_feat_bank": {"en": "Bank integration", "nl": "Bank-integratie"},
+    "dash_feat_bank_desc": {
+        "en": "Connect with Bunq to automatically sync transactions and match payments.",
+        "nl": "Verbind met Bunq om transacties automatisch te synchroniseren en betalingen te matchen.",
+    },
+    "dash_feat_vat": {"en": "VAT overview", "nl": "BTW-overzicht"},
+    "dash_feat_vat_desc": {
+        "en": "Get a clear overview of VAT to collect and pay. Ready for your quarterly filing.",
+        "nl": "Krijg een helder overzicht van af te dragen en te verrekenen BTW. Klaar voor je kwartaalaangifte.",
+    },
+    "dash_feat_clients": {"en": "Client management", "nl": "Klantenbeheer"},
+    "dash_feat_clients_desc": {
+        "en": "Manage clients, projects, and rate types in one place.",
+        "nl": "Beheer klanten, projecten en tarieftypes op één plek.",
+    },
+    "dash_feat_share": {"en": "Client portals", "nl": "Klantportalen"},
+    "dash_feat_share_desc": {
+        "en": "Share time overviews with clients via secure links.",
+        "nl": "Deel urenoverzichten met klanten via beveiligde links.",
+    },
+    "dash_demo_title": {"en": "Try Dash", "nl": "Probeer Dash"},
+    "dash_demo_text": {
+        "en": "Explore the demo environment — no account needed.",
+        "nl": "Verken de demo-omgeving — geen account nodig.",
+    },
+    "dash_demo_btn": {"en": "Open demo", "nl": "Open demo"},
+    "dash_access_title": {"en": "Get access", "nl": "Toegang krijgen"},
+    "dash_access_text": {
+        "en": "Dash is currently in private alpha. Join the waitlist to get early access.",
+        "nl": "Dash is momenteel in private alpha. Schrijf je in op de wachtlijst voor vroege toegang.",
+    },
 
     # --- Waitlist ---
     "waitlist_title": {"en": "Join the waitlist", "nl": "Schrijf je in op de wachtlijst"},
@@ -170,7 +260,7 @@ TRANSLATIONS = {
     "waitlist_email": {"en": "Email address", "nl": "E-mailadres"},
     "waitlist_name": {"en": "Name (optional)", "nl": "Naam (optioneel)"},
     "waitlist_product": {"en": "Interested in", "nl": "Geïnteresseerd in"},
-    "waitlist_both": {"en": "Both", "nl": "Beide"},
+    "waitlist_all": {"en": "All products", "nl": "Alle producten"},
     "waitlist_submit": {"en": "Join waitlist", "nl": "Aanmelden"},
     "waitlist_success": {
         "en": "You're on the list! We'll be in touch.",

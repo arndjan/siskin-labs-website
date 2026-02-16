@@ -16,47 +16,112 @@
 <section id="products" class="section">
     <div class="container">
         <div class="section__label">{{ t('products_title') }}</div>
-        <div class="products">
-            <!-- Perch -->
-            <div class="product-card">
-                <span class="product-card__badge">Alpha</span>
-                <div class="product-card__icon">P</div>
-                <h2 class="product-card__name">Perch</h2>
-                <p class="product-card__tagline">{{ t('perch_tagline') }}</p>
-                <p class="product-card__desc">{{ t('perch_description') }}</p>
-                <ul class="product-card__features">
-                    <li>{{ t('perch_feature_1') }}</li>
-                    <li>{{ t('perch_feature_2') }}</li>
-                    <li>{{ t('perch_feature_3') }}</li>
-                    <li>{{ t('perch_feature_4') }}</li>
-                </ul>
-                <div class="product-card__actions">
-                    <a href="/perch" class="btn btn--primary">{{ t('learn_more') }}</a>
-                    <a href="/perch#demo" class="btn btn--outline">{{ t('try_demo') }}</a>
-                </div>
-            </div>
+        <div class="product-carousel">
+            <div class="swiper" id="product-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Perch -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <span class="product-card__badge">Alpha</span>
+                            <div class="product-card__icon">P</div>
+                            <h2 class="product-card__name">Perch</h2>
+                            <p class="product-card__tagline">{{ t('perch_tagline') }}</p>
+                            <p class="product-card__desc">{{ t('perch_description') }}</p>
+                            <ul class="product-card__features">
+                                <li>{{ t('perch_feature_1') }}</li>
+                                <li>{{ t('perch_feature_2') }}</li>
+                                <li>{{ t('perch_feature_3') }}</li>
+                                <li>{{ t('perch_feature_4') }}</li>
+                            </ul>
+                            <div class="product-card__actions">
+                                <a href="/perch" class="btn btn--primary">{{ t('learn_more') }}</a>
+                                <a href="/perch#demo" class="btn btn--outline">{{ t('try_demo') }}</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Cache -->
-            <div class="product-card">
-                <span class="product-card__badge product-card__badge--dev">{{ t('coming_soon') }}</span>
-                <div class="product-card__icon">C</div>
-                <h2 class="product-card__name">Cache</h2>
-                <p class="product-card__tagline">{{ t('cache_tagline') }}</p>
-                <p class="product-card__desc">{{ t('cache_description') }}</p>
-                <ul class="product-card__features">
-                    <li>{{ t('cache_feature_1') }}</li>
-                    <li>{{ t('cache_feature_2') }}</li>
-                    <li>{{ t('cache_feature_3') }}</li>
-                    <li>{{ t('cache_feature_4') }}</li>
-                </ul>
-                <div class="product-card__actions">
-                    <a href="/cache" class="btn btn--primary">{{ t('learn_more') }}</a>
-                    <a href="/waitlist" class="btn btn--outline">{{ t('nav_waitlist') }}</a>
+                    <!-- Cache -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <span class="product-card__badge">Alpha</span>
+                            <div class="product-card__icon">C</div>
+                            <h2 class="product-card__name">Cache</h2>
+                            <p class="product-card__tagline">{{ t('cache_tagline') }}</p>
+                            <p class="product-card__desc">{{ t('cache_description') }}</p>
+                            <ul class="product-card__features">
+                                <li>{{ t('cache_feature_1') }}</li>
+                                <li>{{ t('cache_feature_2') }}</li>
+                                <li>{{ t('cache_feature_3') }}</li>
+                                <li>{{ t('cache_feature_4') }}</li>
+                            </ul>
+                            <div class="product-card__actions">
+                                <a href="/cache" class="btn btn--primary">{{ t('learn_more') }}</a>
+                                <a href="/cache#demo" class="btn btn--outline">{{ t('try_demo') }}</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dash -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <span class="product-card__badge">Alpha</span>
+                            <div class="product-card__icon">D</div>
+                            <h2 class="product-card__name">Dash</h2>
+                            <p class="product-card__tagline">{{ t('dash_tagline') }}</p>
+                            <p class="product-card__desc">{{ t('dash_description') }}</p>
+                            <ul class="product-card__features">
+                                <li>{{ t('dash_feature_1') }}</li>
+                                <li>{{ t('dash_feature_2') }}</li>
+                                <li>{{ t('dash_feature_3') }}</li>
+                                <li>{{ t('dash_feature_4') }}</li>
+                            </ul>
+                            <div class="product-card__actions">
+                                <a href="/dash" class="btn btn--primary">{{ t('learn_more') }}</a>
+                                <a href="/dash#demo" class="btn btn--outline">{{ t('try_demo') }}</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#product-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+            },
+        },
+    });
+});
+</script>
 
 <!-- About -->
 <section class="section section--accent">

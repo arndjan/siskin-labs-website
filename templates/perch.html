@@ -79,8 +79,54 @@
     </div>
 </section>
 
+<!-- Screenshots -->
+<section class="section section--accent">
+    <div class="container">
+        <h2 class="section__title" style="text-align: center; margin-bottom: 2rem;">Perch in actie</h2>
+        <div class="screenshot-carousel">
+            <div class="swiper" id="perch-screenshots">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-chat-response.png" alt="Chat interface met organisatie informatie">
+                            <div class="screenshot-slide__caption">Automatische bedrijfsinformatie via chat</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-relations.png" alt="Relaties overzicht">
+                            <div class="screenshot-slide__caption">Relaties opzoeken en beheren</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-followups.png" alt="Opvolgacties">
+                            <div class="screenshot-slide__caption">Follow-up acties vastleggen</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-organization.png" alt="Organisatie detail">
+                            <div class="screenshot-slide__caption">Organisaties met gekoppelde relaties</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-contact.png" alt="Contact met contactmomenten">
+                            <div class="screenshot-slide__caption">Contactmomenten en opvolgacties per persoon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Demo -->
-<section id="demo" class="section section--accent">
+<section id="demo" class="section">
     <div class="container">
         <div class="demo-box">
             <h2 class="demo-box__title">{{ t('perch_demo_title') }}</h2>
@@ -91,6 +137,29 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#perch-screenshots', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: '.screenshot-carousel .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.screenshot-carousel .swiper-button-next',
+            prevEl: '.screenshot-carousel .swiper-button-prev',
+        },
+    });
+});
+</script>
 
 <!-- CTA -->
 <section class="section">

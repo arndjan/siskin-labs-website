@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -27,6 +29,7 @@
             <nav class="nav">
                 <a href="/perch" class="nav__link {% if active == 'perch' %}nav__link--active{% endif %}">Perch</a>
                 <a href="/cache" class="nav__link {% if active == 'cache' %}nav__link--active{% endif %}">Cache</a>
+                <a href="/dash" class="nav__link {% if active == 'dash' %}nav__link--active{% endif %}">Dash</a>
                 <a href="/waitlist" class="nav__cta">{{ t('nav_waitlist') }}</a>
                 <a href="/lang/{{ other_lang }}" class="nav__lang">{{ other_lang_label }}</a>
             </nav>
@@ -49,6 +52,7 @@
                         <h4>{{ t('footer_products') }}</h4>
                         <a href="/perch">Perch</a>
                         <a href="/cache">Cache</a>
+                        <a href="/dash">Dash</a>
                     </div>
                     <div class="footer__col">
                         <h4>{{ t('footer_company') }}</h4>

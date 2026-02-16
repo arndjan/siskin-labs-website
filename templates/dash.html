@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Dash — {{ t('dash_tagline') }} | Siskin Labs{% endblock %}
+{% block description %}{{ t('dash_hero_subtitle') }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">{{ t('dash_hero_title') }}</h1>
+        <p class="hero__subtitle">{{ t('dash_hero_subtitle') }}</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">{{ t('try_demo') }}</a>
+            <a href="/waitlist" class="btn btn--outline btn--large">{{ t('dash_access_title') }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Dash</div>
+        <h2 class="section__title">{{ t('dash_how_title') }}</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">{{ t('dash_how_1') }}</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">{{ t('dash_how_2') }}</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">{{ t('dash_how_3') }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">{{ t('dash_features_title') }}</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_time') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_time_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_invoices') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_invoices_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_bank') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_bank_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_vat') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_vat_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_clients') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_clients_desc') }}</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">{{ t('dash_feat_share') }}</h3>
+                <p class="feature-card__desc">{{ t('dash_feat_share_desc') }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section section--accent">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">{{ t('dash_demo_title') }}</h2>
+            <p class="demo-box__text">{{ t('dash_demo_text') }}</p>
+            <a href="https://siskin-dash.fly.dev/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                {{ t('dash_demo_btn') }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">{{ t('dash_access_title') }}</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">{{ t('dash_access_text') }}</p>
+        <a href="/waitlist" class="btn btn--primary btn--large">{{ t('nav_waitlist') }}</a>
+    </div>
+</section>
+{% endblock %}

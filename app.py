@@ -71,6 +71,11 @@ async def cache(request: Request):
     return templates.TemplateResponse("cache.html", ctx(request, active="cache"))
 
 
+@app.get("/dash", response_class=HTMLResponse)
+async def dash(request: Request):
+    return templates.TemplateResponse("dash.html", ctx(request, active="dash"))
+
+
 @app.get("/waitlist", response_class=HTMLResponse)
 async def waitlist_page(request: Request):
     return templates.TemplateResponse("waitlist.html", ctx(request, active="waitlist"))
@@ -97,8 +102,8 @@ async def waitlist_submit(
              "success": False, "message": t("waitlist_invalid_email", lang)},
         )
 
-    if product not in ("perch", "cache", "both"):
-        product = "both"
+    if product not in ("perch", "cache", "dash", "all"):
+        product = "all"
 
     ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "")
     added = add_to_waitlist(email, name, product, lang, ip)
@@ -138,7 +143,7 @@ async def subscribe_submit(
              "success": False, "message": t("subscribe_invalid_email", lang)},
         )
 
-    if interests not in ("all", "perch", "cache", "announcements"):
+    if interests not in ("all", "perch", "cache", "dash", "announcements"):
         interests = "all"
 
     ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "")
