@@ -55,15 +55,15 @@ TRANSLATIONS = {
     "cache_feature_4": {"en": "API integrations", "nl": "API-integraties"},
 
     "dash_tagline": {
-        "en": "Financial dashboard for freelancers",
-        "nl": "Financieel dashboard voor freelancers",
+        "en": "Invoicing and bookkeeping for freelancers",
+        "nl": "Facturatie en boekhouding voor freelancers",
     },
     "dash_description": {
-        "en": "Track time, send invoices, and stay on top of your finances. Built for freelancers and small business owners who want simplicity without sacrificing power.",
-        "nl": "Registreer uren, verstuur facturen en houd je financiën bij. Gebouwd voor freelancers en kleine ondernemers die eenvoud willen zonder in te leveren op mogelijkheden.",
+        "en": "Track time, send invoices, and manage expenses — all in one place. Forward your invoices by email and they're processed automatically. No clutter, no learning curve.",
+        "nl": "Registreer uren, verstuur facturen en beheer je kosten — alles op een plek. Forward je facturen per email en ze worden automatisch verwerkt. Geen rommel, geen leercurve.",
     },
-    "dash_feature_1": {"en": "Time tracking", "nl": "Urenregistratie"},
-    "dash_feature_2": {"en": "Invoicing with PDF", "nl": "Facturatie met PDF"},
+    "dash_feature_1": {"en": "Time tracking & invoicing", "nl": "Urenregistratie & facturatie"},
+    "dash_feature_2": {"en": "Email invoice forwarding", "nl": "Facturen forwarden per email"},
     "dash_feature_3": {"en": "Bank integration", "nl": "Bank-integratie"},
     "dash_feature_4": {"en": "VAT overview", "nl": "BTW-overzicht"},
 
@@ -188,12 +188,12 @@ TRANSLATIONS = {
 
     # --- Dash product page ---
     "dash_hero_title": {
-        "en": "Your finances, simplified",
-        "nl": "Jouw financiën, vereenvoudigd",
+        "en": "Less admin, more work",
+        "nl": "Minder administratie, meer werk",
     },
     "dash_hero_subtitle": {
-        "en": "Dash is a lightweight financial dashboard built for freelancers and small business owners who want to spend less time on admin and more time on what matters.",
-        "nl": "Dash is een lichtgewicht financieel dashboard gebouwd voor freelancers en kleine ondernemers die minder tijd willen besteden aan administratie en meer aan wat ertoe doet.",
+        "en": "Dash handles your invoicing, expenses, and VAT so you can focus on what you do best. Forward your invoices by email — Dash does the rest.",
+        "nl": "Dash regelt je facturatie, kosten en BTW zodat jij je kunt richten op waar je goed in bent. Forward je facturen per email — Dash doet de rest.",
     },
     "dash_how_title": {"en": "How it works", "nl": "Hoe het werkt"},
     "dash_how_1": {
@@ -201,28 +201,33 @@ TRANSLATIONS = {
         "nl": "Registreer je uren per project met een simpel weekoverzicht",
     },
     "dash_how_2": {
-        "en": "Generate professional invoices with one click",
-        "nl": "Genereer professionele facturen met één klik",
+        "en": "Generate and send professional invoices with one click",
+        "nl": "Genereer en verstuur professionele facturen met een klik",
     },
     "dash_how_3": {
-        "en": "Connect your bank to automatically match payments",
-        "nl": "Koppel je bank om betalingen automatisch te matchen",
+        "en": "Forward incoming invoices by email — amounts, VAT, and supplier are extracted automatically",
+        "nl": "Forward inkomende facturen per email — bedragen, BTW en leverancier worden automatisch herkend",
     },
     "dash_features_title": {"en": "Features", "nl": "Features"},
     "dash_feat_time": {"en": "Time tracking", "nl": "Urenregistratie"},
     "dash_feat_time_desc": {
-        "en": "Log hours per project with a clean weekly view. No clutter, just what you need.",
-        "nl": "Log uren per project met een overzichtelijke weekweergave. Geen rommel, alleen wat je nodig hebt.",
+        "en": "Log hours per project with a clean weekly view. Import from Toggl with one click.",
+        "nl": "Log uren per project met een overzichtelijke weekweergave. Importeer vanuit Toggl met een klik.",
     },
     "dash_feat_invoices": {"en": "Invoicing", "nl": "Facturatie"},
     "dash_feat_invoices_desc": {
         "en": "Create and send professional PDF invoices. Track payment status at a glance.",
         "nl": "Maak en verstuur professionele PDF-facturen. Zie direct de betaalstatus.",
     },
+    "dash_feat_incoming": {"en": "Email invoice forwarding", "nl": "Facturen forwarden per email"},
+    "dash_feat_incoming_desc": {
+        "en": "Forward invoices to your personal inbox address. PDF attachments are scanned with OCR, plain-text invoices are parsed automatically. No manual data entry.",
+        "nl": "Forward facturen naar je persoonlijke inbox-adres. PDF-bijlagen worden gescand met OCR, facturen zonder bijlage worden automatisch herkend. Geen handmatige invoer.",
+    },
     "dash_feat_bank": {"en": "Bank integration", "nl": "Bank-integratie"},
     "dash_feat_bank_desc": {
-        "en": "Connect with Bunq to automatically sync transactions and match payments.",
-        "nl": "Verbind met Bunq om transacties automatisch te synchroniseren en betalingen te matchen.",
+        "en": "Connect your bank to automatically sync transactions and match payments to invoices.",
+        "nl": "Koppel je bank om transacties automatisch te synchroniseren en betalingen aan facturen te matchen.",
     },
     "dash_feat_vat": {"en": "VAT overview", "nl": "BTW-overzicht"},
     "dash_feat_vat_desc": {
@@ -232,12 +237,17 @@ TRANSLATIONS = {
     "dash_feat_clients": {"en": "Client management", "nl": "Klantenbeheer"},
     "dash_feat_clients_desc": {
         "en": "Manage clients, projects, and rate types in one place.",
-        "nl": "Beheer klanten, projecten en tarieftypes op één plek.",
+        "nl": "Beheer klanten, projecten en tarieftypes op een plek.",
     },
     "dash_feat_share": {"en": "Client portals", "nl": "Klantportalen"},
     "dash_feat_share_desc": {
         "en": "Share time overviews with clients via secure links.",
         "nl": "Deel urenoverzichten met klanten via beveiligde links.",
+    },
+    "dash_feat_privacy": {"en": "Privacy-first", "nl": "Privacy-first"},
+    "dash_feat_privacy_desc": {
+        "en": "Your data stays yours. Self-hosted in Europe, no tracking, full GDPR export.",
+        "nl": "Jouw data blijft van jou. Gehost in Europa, geen tracking, volledige GDPR-export.",
     },
     "dash_demo_title": {"en": "Try Dash", "nl": "Probeer Dash"},
     "dash_demo_text": {

@@ -27,9 +27,9 @@
             </button>
 
             <nav class="nav">
+                <a href="/dash" class="nav__link {% if active == 'dash' %}nav__link--active{% endif %}">Dash</a>
                 <a href="/perch" class="nav__link {% if active == 'perch' %}nav__link--active{% endif %}">Perch</a>
                 <a href="/cache" class="nav__link {% if active == 'cache' %}nav__link--active{% endif %}">Cache</a>
-                <a href="/dash" class="nav__link {% if active == 'dash' %}nav__link--active{% endif %}">Dash</a>
                 <a href="/waitlist" class="nav__cta">{{ t('nav_waitlist') }}</a>
                 <a href="/lang/{{ other_lang }}" class="nav__lang">{{ other_lang_label }}</a>
             </nav>
@@ -50,9 +50,9 @@
                 <div class="footer__links">
                     <div class="footer__col">
                         <h4>{{ t('footer_products') }}</h4>
+                        <a href="/dash">Dash</a>
                         <a href="/perch">Perch</a>
                         <a href="/cache">Cache</a>
-                        <a href="/dash">Dash</a>
                     </div>
                     <div class="footer__col">
                         <h4>{{ t('footer_company') }}</h4>
