@@ -201,7 +201,7 @@ TRANSLATIONS = {
     },
     "dash_hero_longdesc": {
         "en": "Hours logged, invoices sent, payments coming in. Dash shows you the pulse of your business. <strong>Look at you go.</strong>",
-        "nl": "Uren gemaakt, facturen verstuurd, betalingen komen binnen. Dash laat je de hartslag van je bedrijf voelen. <strong>Dat draait lekker.</strong>",
+        "nl": "Uren gemaakt, facturen verstuurd, betalingen komen binnen. Met Dash voel je de hartslag van je bedrijf. <strong>Dat&nbsp;draait&nbsp;lekker.</strong>",
     },
     "dash_how_title": {"en": "How it works", "nl": "Hoe het werkt"},
     "dash_how_1": {
