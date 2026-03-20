@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blijf op de hoogte | Siskin Labs</title>
+    <meta name="description" content="Siskin Labs builds lightweight, intelligent software for professionals.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/nl/" class="header__logo">
+                <img src="/static/siskin-icon.png" alt="Siskin">
+                Siskin Labs
+            </a>
+
+            <button class="nav__toggle" onclick="document.querySelector('.nav').classList.toggle('nav--open')" aria-label="Menu">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav class="nav">
+                <a href="/nl/dash.html" class="nav__link ">Dash</a>
+                <a href="/nl/perch.html" class="nav__link ">Perch</a>
+                <a href="/nl/cache.html" class="nav__link ">Cache</a>
+                <a href="/nl/waitlist.html" class="nav__cta">Wachtlijst</a>
+                <a href="/en/" class="nav__lang">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="hero">
+    <div class="container container--narrow">
+        <h1 class="hero__title">Blijf op de hoogte</h1>
+        <p class="hero__subtitle" style="margin-bottom: 2.5rem;">Ontvang updates over productlanceringen, nieuwe features en aanbiedingen. Geen spam — altijd opzegbaar.</p>
+
+        <form class="waitlist-form"
+              hx-post="/api/subscribe"
+              hx-target="#subscribe-result"
+              hx-swap="innerHTML">
+
+            <div class="form-group">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required
+                       placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Naam (optioneel)</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="interests">Ik ben geïnteresseerd in</label>
+                <select id="interests" name="interests">
+                    <option value="all">Alles</option>
+                    <option value="perch">Perch</option>
+                    <option value="cache">Cache</option>
+                    <option value="dash">Dash</option>
+                    <option value="announcements">Alleen aankondigingen</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--large btn--full">
+                Aanmelden
+            </button>
+        </form>
+
+        <div id="subscribe-result"></div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__name">Siskin Labs</div>
+                    <div class="footer__tagline">Onafhankelijke software studio, Amsterdam</div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>Producten</h4>
+                        <a href="/nl/dash.html">Dash</a>
+                        <a href="/nl/perch.html">Perch</a>
+                        <a href="/nl/cache.html">Cache</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Bedrijf</h4>
+                        <a href="mailto:hello@siskin.amsterdam">Contact</a>
+                        <a href="/nl/subscribe.html">Nieuwsbrief</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2025 Siskin Labs. Alle rechten voorbehouden.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

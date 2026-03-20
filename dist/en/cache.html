@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache — Your second brain for knowledge | Siskin Labs</title>
+    <meta name="description" content="Cache is a smart knowledge tool that helps you capture, connect, and retrieve information when you need it.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/en/" class="header__logo">
+                <img src="/static/siskin-icon.png" alt="Siskin">
+                Siskin Labs
+            </a>
+
+            <button class="nav__toggle" onclick="document.querySelector('.nav').classList.toggle('nav--open')" aria-label="Menu">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav class="nav">
+                <a href="/en/dash.html" class="nav__link ">Dash</a>
+                <a href="/en/perch.html" class="nav__link ">Perch</a>
+                <a href="/en/cache.html" class="nav__link nav__link--active">Cache</a>
+                <a href="/en/waitlist.html" class="nav__cta">Join Waitlist</a>
+                <a href="/nl/" class="nav__lang">Nederlands</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">Remember everything that matters</h1>
+        <p class="hero__subtitle">Cache is a smart knowledge tool that helps you capture, connect, and retrieve information when you need it.</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">Try the demo</a>
+            <a href="/en/waitlist.html" class="btn btn--outline btn--large">Get access</a>
+        </div>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Cache</div>
+        <h2 class="section__title">The vision</h2>
+        <div style="margin-bottom: 1.5rem;"></div>
+        <ul class="vision-list">
+            <li>Capture information from any source — web, conversations, documents</li>
+            <li>Automatic connections between related knowledge</li>
+            <li>Instant retrieval through natural language search</li>
+            <li>Privacy-first — your data stays yours</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section section--accent">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">Try Cache</h2>
+            <p class="demo-box__text">Explore the demo environment — no account needed.</p>
+            <a href="https://siskin-cache.fly.dev/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                Open demo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">Get access</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">Cache is currently in private alpha. Join the waitlist to get early access.</p>
+        <a href="/en/waitlist.html" class="btn btn--primary btn--large">Join Waitlist</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__name">Siskin Labs</div>
+                    <div class="footer__tagline">Independent software studio, Amsterdam</div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>Products</h4>
+                        <a href="/en/dash.html">Dash</a>
+                        <a href="/en/perch.html">Perch</a>
+                        <a href="/en/cache.html">Cache</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Company</h4>
+                        <a href="mailto:hello@siskin.amsterdam">Contact</a>
+                        <a href="/en/subscribe.html">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2025 Siskin Labs. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

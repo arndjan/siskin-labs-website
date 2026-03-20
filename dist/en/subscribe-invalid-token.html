@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Siskin Labs{% endblock %}</title>
-    <meta name="description" content="{% block description %}Siskin Labs builds lightweight, intelligent software for professionals.{% endblock %}">
+    <title>This confirmation link is invalid or has expired. | Siskin Labs</title>
+    <meta name="description" content="Siskin Labs builds lightweight, intelligent software for professionals.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <body>
     <header class="header">
         <div class="container header__inner">
-            <a href="/" class="header__logo">
+            <a href="/en/" class="header__logo">
                 <img src="/static/siskin-icon.png" alt="Siskin">
                 Siskin Labs
             </a>
@@ -27,15 +27,26 @@
             </button>
 
             <nav class="nav">
-                <a href="/dash" class="nav__link {% if active == 'dash' %}nav__link--active{% endif %}">Dash</a>
-                <a href="/waitlist" class="nav__cta">{{ t('nav_waitlist') }}</a>
-                <a href="/lang/{{ other_lang }}" class="nav__lang">{{ other_lang_label }}</a>
+                <a href="/en/dash.html" class="nav__link ">Dash</a>
+                <a href="/en/perch.html" class="nav__link ">Perch</a>
+                <a href="/en/cache.html" class="nav__link ">Cache</a>
+                <a href="/en/waitlist.html" class="nav__cta">Join Waitlist</a>
+                <a href="/nl/" class="nav__lang">Nederlands</a>
             </nav>
         </div>
     </header>
 
     <main>
-        {% block content %}{% endblock %}
+        
+<section class="hero">
+    <div class="container container--narrow" style="text-align: center;">
+        
+        <h1 class="hero__title">This confirmation link is invalid or has expired.</h1>
+        <a href="/en/subscribe.html" class="btn btn--outline btn--large" style="margin-top: 1rem;">Subscribe</a>
+        
+    </div>
+</section>
+
     </main>
 
     <footer class="footer">
@@ -43,22 +54,24 @@
             <div class="footer__inner">
                 <div class="footer__brand">
                     <div class="footer__name">Siskin Labs</div>
-                    <div class="footer__tagline">{{ t('footer_tagline') }}</div>
+                    <div class="footer__tagline">Independent software studio, Amsterdam</div>
                 </div>
                 <div class="footer__links">
                     <div class="footer__col">
-                        <h4>{{ t('footer_products') }}</h4>
-                        <a href="/dash">Dash</a>
+                        <h4>Products</h4>
+                        <a href="/en/dash.html">Dash</a>
+                        <a href="/en/perch.html">Perch</a>
+                        <a href="/en/cache.html">Cache</a>
                     </div>
                     <div class="footer__col">
-                        <h4>{{ t('footer_company') }}</h4>
-                        <a href="mailto:hello@siskin.amsterdam">{{ t('footer_contact') }}</a>
-                        <a href="/subscribe">{{ t('footer_newsletter') }}</a>
+                        <h4>Company</h4>
+                        <a href="mailto:hello@siskin.amsterdam">Contact</a>
+                        <a href="/en/subscribe.html">Newsletter</a>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                &copy; 2025 {{ t('footer_copyright') }}
+                &copy; 2025 Siskin Labs. All rights reserved.
             </div>
         </div>
     </footer>

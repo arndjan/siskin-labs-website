@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perch — Slimme CRM voor je netwerk | Siskin Labs</title>
+    <meta name="description" content="Perch is een lichtgewicht CRM gebouwd voor professionals die hun netwerk willen bijhouden — zonder de overhead van traditionele CRM-systemen.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/nl/" class="header__logo">
+                <img src="/static/siskin-icon.png" alt="Siskin">
+                Siskin Labs
+            </a>
+
+            <button class="nav__toggle" onclick="document.querySelector('.nav').classList.toggle('nav--open')" aria-label="Menu">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav class="nav">
+                <a href="/nl/dash.html" class="nav__link ">Dash</a>
+                <a href="/nl/perch.html" class="nav__link nav__link--active">Perch</a>
+                <a href="/nl/cache.html" class="nav__link ">Cache</a>
+                <a href="/nl/waitlist.html" class="nav__cta">Wachtlijst</a>
+                <a href="/en/" class="nav__lang">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">Jouw relaties, beheerd via chat</h1>
+        <p class="hero__subtitle">Perch is een lichtgewicht CRM gebouwd voor professionals die hun netwerk willen bijhouden — zonder de overhead van traditionele CRM-systemen.</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">Probeer de demo</a>
+            <a href="/nl/waitlist.html" class="btn btn--outline btn--large">Toegang krijgen</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Perch</div>
+        <h2 class="section__title">Hoe het werkt</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">Typ natuurlijk — &#34;Koffie gehad met Anna van Bakkerij Jansen over hun nieuwe website&#34;</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">Perch herkent automatisch het contact, de organisatie, het type en de notities</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">Je netwerk blijft georganiseerd zonder handmatige invoer</div>
+            </div>
+        </div>
+        <div class="highlight">
+            <p class="highlight__text">
+                "Koffie gehad met Anna van Bakkerij Jansen over hun nieuwe website"
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">Features</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 class="feature-card__title">Chat interface</h3>
+                <p class="feature-card__desc">Voeg contacten toe, log vergaderingen en doorzoek je netwerk — alles via natuurlijke taal.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Relaties &amp; Organisaties</h3>
+                <p class="feature-card__desc">Contactkaarten met flexibele M:N koppelingen tussen personen en organisaties.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Contactmomenten</h3>
+                <p class="feature-card__desc">Registreer telefoontjes, emails, meetings, koffie — met datum, notities en opvolgacties.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Slim taggen</h3>
+                <p class="feature-card__desc">Categoriseer en filter je netwerk met flexibele tags.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Mobile-first</h3>
+                <p class="feature-card__desc">Chat-eerst op mobiel, split-view op desktop. Geoptimaliseerd voor onderweg.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Multi-tenant</h3>
+                <p class="feature-card__desc">Gescheiden omgevingen per team of project, met toegangsbeheer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots -->
+<section class="section section--accent">
+    <div class="container">
+        <h2 class="section__title" style="text-align: center; margin-bottom: 2rem;">Perch in actie</h2>
+        <div class="screenshot-carousel">
+            <div class="swiper" id="perch-screenshots">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-chat-response.png" alt="Chat interface met organisatie informatie">
+                            <div class="screenshot-slide__caption">Automatische bedrijfsinformatie via chat</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-relations.png" alt="Relaties overzicht">
+                            <div class="screenshot-slide__caption">Relaties opzoeken en beheren</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-followups.png" alt="Opvolgacties">
+                            <div class="screenshot-slide__caption">Follow-up acties vastleggen</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-organization.png" alt="Organisatie detail">
+                            <div class="screenshot-slide__caption">Organisaties met gekoppelde relaties</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/perch/perch-contact.png" alt="Contact met contactmomenten">
+                            <div class="screenshot-slide__caption">Contactmomenten en opvolgacties per persoon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">Probeer Perch</h2>
+            <p class="demo-box__text">Verken de sandbox omgeving — geen account nodig. Data wordt elke nacht gereset.</p>
+            <a href="https://perch-crm.fly.dev/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                Open sandbox demo
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#perch-screenshots', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: '.screenshot-carousel .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.screenshot-carousel .swiper-button-next',
+            prevEl: '.screenshot-carousel .swiper-button-prev',
+        },
+    });
+});
+</script>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">Toegang krijgen</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">Perch is momenteel in private alpha. Schrijf je in op de wachtlijst voor vroege toegang.</p>
+        <a href="/nl/waitlist.html" class="btn btn--primary btn--large">Wachtlijst</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__name">Siskin Labs</div>
+                    <div class="footer__tagline">Onafhankelijke software studio, Amsterdam</div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>Producten</h4>
+                        <a href="/nl/dash.html">Dash</a>
+                        <a href="/nl/perch.html">Perch</a>
+                        <a href="/nl/cache.html">Cache</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Bedrijf</h4>
+                        <a href="mailto:hello@siskin.amsterdam">Contact</a>
+                        <a href="/nl/subscribe.html">Nieuwsbrief</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2025 Siskin Labs. Alle rechten voorbehouden.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

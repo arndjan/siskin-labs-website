@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash — Facturatie en boekhouding voor freelancers | Siskin Labs</title>
+    <meta name="description" content="Uren gemaakt, facturen verstuurd, betalingen binnen. Dash laat je de hartslag van je bedrijf voelen — en dat voelt goed.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/nl/" class="header__logo">
+                <img src="/static/siskin-icon.png" alt="Siskin">
+                Siskin Labs
+            </a>
+
+            <button class="nav__toggle" onclick="document.querySelector('.nav').classList.toggle('nav--open')" aria-label="Menu">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav class="nav">
+                <a href="/nl/dash.html" class="nav__link nav__link--active">Dash</a>
+                <a href="/nl/perch.html" class="nav__link ">Perch</a>
+                <a href="/nl/cache.html" class="nav__link ">Cache</a>
+                <a href="/nl/waitlist.html" class="nav__cta">Wachtlijst</a>
+                <a href="/en/" class="nav__lang">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">Het draait lekker</h1>
+        <p class="hero__subtitle">Uren gemaakt, facturen verstuurd, betalingen binnen. Dash laat je de hartslag van je bedrijf voelen — en dat voelt goed.</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">Probeer de demo</a>
+            <a href="/nl/waitlist.html" class="btn btn--outline btn--large">Toegang krijgen</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Dash</div>
+        <h2 class="section__title">Hoe het werkt</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">Registreer je uren per project met een simpel weekoverzicht</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">Genereer en verstuur professionele facturen met een klik</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">Forward inkomende facturen per email — bedragen, BTW en leverancier worden automatisch herkend</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">Features</h2>
+        <div style="margin-bottom: 2rem;"></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 class="feature-card__title">Facturen forwarden per email</h3>
+                <p class="feature-card__desc">Forward facturen naar je persoonlijke inbox-adres. PDF-bijlagen worden gescand met OCR, facturen zonder bijlage worden automatisch herkend. Geen handmatige invoer.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Facturatie</h3>
+                <p class="feature-card__desc">Maak en verstuur professionele PDF-facturen. Zie direct de betaalstatus.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Urenregistratie</h3>
+                <p class="feature-card__desc">Log uren per project met een overzichtelijke weekweergave. Importeer vanuit Toggl met een klik.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">BTW-overzicht</h3>
+                <p class="feature-card__desc">Krijg een helder overzicht van af te dragen en te verrekenen BTW. Klaar voor je kwartaalaangifte.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Bank-integratie</h3>
+                <p class="feature-card__desc">Koppel je bank om transacties automatisch te synchroniseren en betalingen aan facturen te matchen.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Klantenbeheer</h3>
+                <p class="feature-card__desc">Beheer klanten, projecten en tarieftypes op één plek.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Klantportalen</h3>
+                <p class="feature-card__desc">Deel urenoverzichten met klanten via beveiligde links.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-card__title">Privacy-first</h3>
+                <p class="feature-card__desc">Jouw data blijft van jou. Gehost in Europa, geen tracking, volledige GDPR-export.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section section--accent">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">Probeer Dash</h2>
+            <p class="demo-box__text">Verken de demo-omgeving — geen account nodig.</p>
+            <a href="https://dash.siskin.amsterdam/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                Open demo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">Toegang krijgen</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">Dash is momenteel in private alpha. Schrijf je in op de wachtlijst voor vroege toegang.</p>
+        <a href="/nl/waitlist.html" class="btn btn--primary btn--large">Wachtlijst</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <div class="footer__name">Siskin Labs</div>
+                    <div class="footer__tagline">Onafhankelijke software studio, Amsterdam</div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>Producten</h4>
+                        <a href="/nl/dash.html">Dash</a>
+                        <a href="/nl/perch.html">Perch</a>
+                        <a href="/nl/cache.html">Cache</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Bedrijf</h4>
+                        <a href="mailto:hello@siskin.amsterdam">Contact</a>
+                        <a href="/nl/subscribe.html">Nieuwsbrief</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2025 Siskin Labs. Alle rechten voorbehouden.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
