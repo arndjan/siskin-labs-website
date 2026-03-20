@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1504 964">
+  <defs>
+    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d2d2d"/>
+      <stop offset="0.5" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#262626"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#444"/>
+      <stop offset="0.5" stop-color="#333"/>
+      <stop offset="1" stop-color="#444"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer edge highlight -->
+  <rect x="0" y="0" width="1504" height="964" rx="44" fill="url(#edge)"/>
+  <!-- Body -->
+  <rect x="1.5" y="1.5" width="1501" height="961" rx="43" fill="url(#bezel)"/>
+  <!-- Inner shadow line -->
+  <rect x="28" y="28" width="1448" height="908" rx="8" fill="#111" opacity="0.3"/>
+  <!-- Screen area (black) -->
+  <rect x="30" y="30" width="1444" height="904" rx="6" fill="#000"/>
+  <!-- Camera dot -->
+  <circle cx="752" cy="15" r="3.5" fill="#222" stroke="#333" stroke-width="0.5"/>
+  <!-- Camera lens -->
+  <circle cx="752" cy="15" r="1.5" fill="#1a1a2a"/>
+</svg>

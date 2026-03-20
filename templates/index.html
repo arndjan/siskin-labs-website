@@ -6,9 +6,10 @@
 <!-- Hero: Dash as single product -->
 <section class="hero">
     <div class="container">
-        <div class="hero__badge">Alpha</div>
+        <div class="hero__badge-line"><span class="badge">Alpha</span></div>
         <h1 class="hero__title">{{ t('dash_hero_title') }}</h1>
         <p class="hero__subtitle">{{ t('dash_hero_subtitle') }}</p>
+        <p class="hero__intro">{{ t('dash_hero_longdesc')|safe }}</p>
         <div class="hero__actions">
             <a href="/dash" class="hero__cta">{{ t('learn_more') }}</a>
             <a href="/waitlist" class="btn btn--outline btn--large">{{ t('nav_waitlist') }}</a>
@@ -20,7 +21,7 @@
 <section class="section" style="padding-top: 0; margin-top: -2rem;">
     <div class="container">
         <div class="hero-screenshot">
-            <img src="/static/screenshots/dash/dash-dashboard-jaar.png" alt="Dash dashboard">
+            <img src="/static/dash-hero.png" alt="Dash dashboard">
         </div>
     </div>
 </section>
@@ -172,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="container" style="text-align: center;">
         <h2 class="section__title" style="margin-bottom: 2.5rem;">{{ t('dash_mobile_title') }}</h2>
         <div class="mobile-previews">
-            <img src="/static/screenshots/dash/dash-mockup-dashboard.png" alt="Dash mobile dashboard">
+            <img src="/static/screenshots/dash/dash-mockup-uren.png" alt="Dash mobile uren">
             <img src="/static/screenshots/dash/dash-mockup-facturen.png" alt="Dash mobile facturen">
             <img src="/static/screenshots/dash/dash-mockup-inkomend.png" alt="Dash mobile inkomend">
         </div>

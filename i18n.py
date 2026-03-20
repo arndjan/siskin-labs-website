@@ -55,8 +55,8 @@ TRANSLATIONS = {
     "cache_feature_4": {"en": "API integrations", "nl": "API-integraties"},
 
     "dash_tagline": {
-        "en": "Invoicing and bookkeeping for freelancers",
-        "nl": "Facturatie en boekhouding voor freelancers",
+        "en": "Invoicing and bookkeeping for enterprising freelancers",
+        "nl": "Facturatie en boekhouding voor ondernemende ZZP'ers",
     },
     "dash_description": {
         "en": "Track time, send invoices, and manage expenses — all in one place. Forward your invoices by email and they're processed automatically. No clutter, no learning curve.",
@@ -188,12 +188,20 @@ TRANSLATIONS = {
 
     # --- Dash product page ---
     "dash_hero_title": {
+        "en": "Dash",
+        "nl": "Dash",
+    },
+    "dash_hero_subtitle": {
+        "en": "Invoicing and bookkeeping for enterprising freelancers",
+        "nl": "Facturatie en boekhouding voor ondernemende ZZP'ers.",
+    },
+    "dash_hero_payoff": {
         "en": "Look at you go",
         "nl": "Het draait lekker",
     },
-    "dash_hero_subtitle": {
-        "en": "Hours logged, invoices sent, payments coming in. Dash shows you the pulse of your freelance business — and it feels great.",
-        "nl": "Uren gemaakt, facturen verstuurd, betalingen binnen. Dash laat je de hartslag van je bedrijf voelen — en dat voelt goed.",
+    "dash_hero_longdesc": {
+        "en": "Hours logged, invoices sent, payments coming in. Dash shows you the pulse of your business. <strong>Look at you go.</strong>",
+        "nl": "Uren gemaakt, facturen verstuurd, betalingen komen binnen. Dash laat je de hartslag van je bedrijf voelen. <strong>Dat draait lekker.</strong>",
     },
     "dash_how_title": {"en": "How it works", "nl": "Hoe het werkt"},
     "dash_how_1": {

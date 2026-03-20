@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siskin Labs — Tools die werken zoals jij denkt</title>
+    <title>Siskin Labs — Dash</title>
     <meta name="description" content="Siskin Labs builds lightweight, intelligent software for professionals.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +28,6 @@
 
             <nav class="nav">
                 <a href="/nl/dash.html" class="nav__link ">Dash</a>
-                <a href="/nl/perch.html" class="nav__link ">Perch</a>
-                <a href="/nl/cache.html" class="nav__link ">Cache</a>
                 <a href="/nl/waitlist.html" class="nav__cta">Wachtlijst</a>
                 <a href="/en/" class="nav__lang">English</a>
             </nav>
@@ -38,82 +36,81 @@
 
     <main>
         
-<!-- Hero -->
+<!-- Hero: Dash as single product -->
 <section class="hero">
     <div class="container">
-        <h1 class="hero__title">Tools die werken zoals jij denkt</h1>
-        <p class="hero__subtitle">Siskin Labs bouwt lichtgewicht, intelligente software voor professionals die hun tijd graag slim besteden.</p>
-        <a href="#products" class="hero__cta">Ontdek onze tools</a>
+        <div class="hero__badge-line"><span class="badge">Alpha</span></div>
+        <h1 class="hero__title">Dash</h1>
+        <p class="hero__subtitle">Facturatie en boekhouding voor ondernemende ZZP&#39;ers.</p>
+        <p class="hero__intro">Uren gemaakt, facturen verstuurd, betalingen komen binnen. Dash laat je de hartslag van je bedrijf voelen. <strong>Dat draait lekker.</strong></p>
+        <div class="hero__actions">
+            <a href="/nl/dash.html" class="hero__cta">Meer info</a>
+            <a href="/nl/waitlist.html" class="btn btn--outline btn--large">Wachtlijst</a>
+        </div>
     </div>
 </section>
 
-<!-- Products -->
-<section id="products" class="section">
+<!-- Hero screenshot -->
+<section class="section" style="padding-top: 0; margin-top: -2rem;">
     <div class="container">
-        <div class="section__label">Onze Producten</div>
-        <div class="product-carousel">
-            <div class="swiper" id="product-swiper">
+        <div class="hero-screenshot">
+            <img src="/static/dash-hero.png" alt="Dash dashboard">
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Hoe het werkt</div>
+        <h2 class="section__title" style="margin-bottom: 2rem;">Facturatie en boekhouding voor ondernemende ZZP&#39;ers</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">Registreer je uren per project met een simpel weekoverzicht</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">Genereer en verstuur professionele facturen met een klik</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">Forward inkomende facturen per email — bedragen, BTW en leverancier worden automatisch herkend</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots carousel -->
+<section class="section">
+    <div class="container">
+        <div class="section__label">Features</div>
+        <h2 class="section__title" style="margin-bottom: 2rem;">Urenregistratie, facturatie, btw-overzicht</h2>
+        <div class="screenshot-carousel">
+            <div class="swiper" id="dash-screenshots">
                 <div class="swiper-wrapper">
-                    <!-- Dash -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">D</div>
-                            <h2 class="product-card__name">Dash</h2>
-                            <p class="product-card__tagline">Facturatie en boekhouding voor freelancers</p>
-                            <p class="product-card__desc">Registreer uren, verstuur facturen en beheer je kosten — alles op een plek. Forward je facturen per email en ze worden automatisch verwerkt. Geen rommel, geen leercurve.</p>
-                            <ul class="product-card__features">
-                                <li>Urenregistratie &amp; facturatie</li>
-                                <li>Facturen forwarden per email</li>
-                                <li>Bank-integratie</li>
-                                <li>BTW-overzicht</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/nl/dash.html" class="btn btn--primary">Meer info</a>
-                                <a href="/nl/dash.html#demo" class="btn btn--outline">Probeer de demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-uren-desktop.png" alt="Urenregistratie">
+                            <div class="screenshot-slide__caption">Urenregistratie</div>
                         </div>
                     </div>
-
-                    <!-- Perch -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">P</div>
-                            <h2 class="product-card__name">Perch</h2>
-                            <p class="product-card__tagline">Slimme CRM voor je netwerk</p>
-                            <p class="product-card__desc">Beheer je professionele relaties via een natuurlijke taal chat interface. Geen ingewikkelde formulieren — gewoon typen wat je wilt doen.</p>
-                            <ul class="product-card__features">
-                                <li>Chat-gestuurde CRM</li>
-                                <li>Nederlandse &amp; Engelse NLP</li>
-                                <li>Multi-tenant architectuur</li>
-                                <li>Mobile-first design</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/nl/perch.html" class="btn btn--primary">Meer info</a>
-                                <a href="/nl/perch.html#demo" class="btn btn--outline">Probeer de demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-facturen.png" alt="Facturen">
+                            <div class="screenshot-slide__caption">Facturatie</div>
                         </div>
                     </div>
-
-                    <!-- Cache -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">C</div>
-                            <h2 class="product-card__name">Cache</h2>
-                            <p class="product-card__tagline">Je tweede brein voor kennis</p>
-                            <p class="product-card__desc">Leg informatie moeiteloos vast, organiseer en vind het terug. Cache helpt je onthouden wat belangrijk is, wanneer het belangrijk is.</p>
-                            <ul class="product-card__features">
-                                <li>Slimme kennisopslag</li>
-                                <li>Direct terugvinden</li>
-                                <li>Verbonden notities</li>
-                                <li>API-integraties</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/nl/cache.html" class="btn btn--primary">Meer info</a>
-                                <a href="/nl/cache.html#demo" class="btn btn--outline">Probeer de demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-inkomend.png" alt="Inkomende facturen">
+                            <div class="screenshot-slide__caption">Facturen forwarden per email</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-btw.png" alt="BTW-overzicht">
+                            <div class="screenshot-slide__caption">BTW-overzicht</div>
                         </div>
                     </div>
                 </div>
@@ -127,13 +124,13 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('#product-swiper', {
+    new Swiper('#dash-screenshots', {
         slidesPerView: 1,
         spaceBetween: 24,
         loop: true,
         autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+            delay: 4000,
+            disableOnInteraction: true,
             pauseOnMouseEnter: true,
         },
         pagination: {
@@ -144,33 +141,84 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 32,
-            },
-        },
     });
 });
 </script>
 
-<!-- About -->
+<!-- Features grid -->
 <section class="section section--accent">
     <div class="container">
-        <div class="about">
-            <div class="about__text">
-                <div class="section__label">Siskin Labs</div>
-                <h2 class="section__title">Gebouwd in Amsterdam</h2>
-                <p>Siskin Labs is een onafhankelijke software studio in Amsterdam. We bouwen tools die snel, gefocust en respectvol met je data omgaan.</p>
+        <div class="features-grid features-grid--visual">
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-uren.png" alt="Urenregistratie">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Urenregistratie</h3>
+                    <p class="feature-card__desc">Log uren per project met een overzichtelijke weekweergave. Importeer vanuit Toggl met een klik.</p>
+                </div>
             </div>
-            <div class="about__visual">
-                <img src="/static/siskin-logo.png" alt="Siskin Labs">
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-facturen.png" alt="Facturatie">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Facturatie</h3>
+                    <p class="feature-card__desc">Maak en verstuur professionele PDF-facturen. Zie direct de betaalstatus.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-inkomend.png" alt="Inkomende facturen">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Facturen forwarden per email</h3>
+                    <p class="feature-card__desc">Forward facturen naar je persoonlijke inbox-adres. PDF-bijlagen worden gescand met OCR, facturen zonder bijlage worden automatisch herkend. Geen handmatige invoer.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-btw.png" alt="BTW-overzicht">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">BTW-overzicht</h3>
+                    <p class="feature-card__desc">Krijg een helder overzicht van af te dragen en te verrekenen BTW. Klaar voor je kwartaalaangifte.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual feature-card--text-only">
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Klantenbeheer</h3>
+                    <p class="feature-card__desc">Beheer klanten, projecten en tarieftypes op één plek.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual feature-card--text-only">
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Privacy-first</h3>
+                    <p class="feature-card__desc">Jouw data blijft van jou. Gehost in Europa, geen tracking, volledige GDPR-export.</p>
+                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Mobile preview -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title" style="margin-bottom: 2.5rem;">Altijd bij de hand</h2>
+        <div class="mobile-previews">
+            <img src="/static/screenshots/dash/dash-mockup-uren.png" alt="Dash mobile uren">
+            <img src="/static/screenshots/dash/dash-mockup-facturen.png" alt="Dash mobile facturen">
+            <img src="/static/screenshots/dash/dash-mockup-inkomend.png" alt="Dash mobile inkomend">
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--accent">
+    <div class="container" style="text-align: center; max-width: 560px;">
+        <h2 class="section__title">Toegang krijgen</h2>
+        <p class="section__subtitle" style="margin: 0.75rem auto 2rem;">Dash is momenteel in private alpha. Schrijf je in op de wachtlijst voor vroege toegang.</p>
+        <a href="/nl/waitlist.html" class="hero__cta">Wachtlijst</a>
     </div>
 </section>
 
@@ -187,8 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="footer__col">
                         <h4>Producten</h4>
                         <a href="/nl/dash.html">Dash</a>
-                        <a href="/nl/perch.html">Perch</a>
-                        <a href="/nl/cache.html">Cache</a>
                     </div>
                     <div class="footer__col">
                         <h4>Bedrijf</h4>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; }
+  body { background: transparent; display: flex; justify-content: center; align-items: center; height: 100vh; }
+  .ipad {
+    position: relative;
+    width: 1200px;
+  }
+  .ipad__frame {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .ipad__screen {
+    position: absolute;
+    top: 6.67%;
+    left: 4.67%;
+    width: 94.33%;
+    height: 86.67%;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+  <div class="ipad">
+    <img class="ipad__frame" src="static/ipad-frame.png">
+    <iframe class="ipad__screen" src="https://dash.siskin.amsterdam/?period=year"></iframe>
+  </div>
+</body>
+</html>

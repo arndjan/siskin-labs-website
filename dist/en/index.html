@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siskin Labs — Tools that work the way you think</title>
+    <title>Siskin Labs — Dash</title>
     <meta name="description" content="Siskin Labs builds lightweight, intelligent software for professionals.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f0e51b'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='55' font-weight='800' text-anchor='middle' fill='%23000'>S</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +28,6 @@
 
             <nav class="nav">
                 <a href="/en/dash.html" class="nav__link ">Dash</a>
-                <a href="/en/perch.html" class="nav__link ">Perch</a>
-                <a href="/en/cache.html" class="nav__link ">Cache</a>
                 <a href="/en/waitlist.html" class="nav__cta">Join Waitlist</a>
                 <a href="/nl/" class="nav__lang">Nederlands</a>
             </nav>
@@ -38,82 +36,81 @@
 
     <main>
         
-<!-- Hero -->
+<!-- Hero: Dash as single product -->
 <section class="hero">
     <div class="container">
-        <h1 class="hero__title">Tools that work the way you think</h1>
-        <p class="hero__subtitle">Siskin Labs builds lightweight, intelligent software for professionals who value their time.</p>
-        <a href="#products" class="hero__cta">Explore our tools</a>
+        <div class="hero__badge-line"><span class="badge">Alpha</span></div>
+        <h1 class="hero__title">Dash</h1>
+        <p class="hero__subtitle">Invoicing and bookkeeping for enterprising freelancers</p>
+        <p class="hero__intro">Hours logged, invoices sent, payments coming in. Dash shows you the pulse of your business. <strong>Look at you go.</strong></p>
+        <div class="hero__actions">
+            <a href="/en/dash.html" class="hero__cta">Learn more</a>
+            <a href="/en/waitlist.html" class="btn btn--outline btn--large">Join Waitlist</a>
+        </div>
     </div>
 </section>
 
-<!-- Products -->
-<section id="products" class="section">
+<!-- Hero screenshot -->
+<section class="section" style="padding-top: 0; margin-top: -2rem;">
     <div class="container">
-        <div class="section__label">Our Products</div>
-        <div class="product-carousel">
-            <div class="swiper" id="product-swiper">
+        <div class="hero-screenshot">
+            <img src="/static/dash-hero.png" alt="Dash dashboard">
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">How it works</div>
+        <h2 class="section__title" style="margin-bottom: 2rem;">Invoicing and bookkeeping for enterprising freelancers</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step__number">1</div>
+                <div class="step__text">Track your hours per project with a simple weekly view</div>
+            </div>
+            <div class="step">
+                <div class="step__number">2</div>
+                <div class="step__text">Generate and send professional invoices with one click</div>
+            </div>
+            <div class="step">
+                <div class="step__number">3</div>
+                <div class="step__text">Forward incoming invoices by email — amounts, VAT, and supplier are extracted automatically</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots carousel -->
+<section class="section">
+    <div class="container">
+        <div class="section__label">Features</div>
+        <h2 class="section__title" style="margin-bottom: 2rem;">Time tracking, invoicing, vat overview</h2>
+        <div class="screenshot-carousel">
+            <div class="swiper" id="dash-screenshots">
                 <div class="swiper-wrapper">
-                    <!-- Dash -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">D</div>
-                            <h2 class="product-card__name">Dash</h2>
-                            <p class="product-card__tagline">Invoicing and bookkeeping for freelancers</p>
-                            <p class="product-card__desc">Track time, send invoices, and manage expenses — all in one place. Forward your invoices by email and they&#39;re processed automatically. No clutter, no learning curve.</p>
-                            <ul class="product-card__features">
-                                <li>Time tracking &amp; invoicing</li>
-                                <li>Email invoice forwarding</li>
-                                <li>Bank integration</li>
-                                <li>VAT overview</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/en/dash.html" class="btn btn--primary">Learn more</a>
-                                <a href="/en/dash.html#demo" class="btn btn--outline">Try the demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-uren-desktop.png" alt="Urenregistratie">
+                            <div class="screenshot-slide__caption">Time tracking</div>
                         </div>
                     </div>
-
-                    <!-- Perch -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">P</div>
-                            <h2 class="product-card__name">Perch</h2>
-                            <p class="product-card__tagline">Smart CRM for your network</p>
-                            <p class="product-card__desc">Manage your professional relationships through a natural language chat interface. No complex forms — just type what you want to do.</p>
-                            <ul class="product-card__features">
-                                <li>Chat-driven CRM</li>
-                                <li>Dutch &amp; English NLP</li>
-                                <li>Multi-tenant architecture</li>
-                                <li>Mobile-first design</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/en/perch.html" class="btn btn--primary">Learn more</a>
-                                <a href="/en/perch.html#demo" class="btn btn--outline">Try the demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-facturen.png" alt="Facturen">
+                            <div class="screenshot-slide__caption">Invoicing</div>
                         </div>
                     </div>
-
-                    <!-- Cache -->
                     <div class="swiper-slide">
-                        <div class="product-card">
-                            <span class="product-card__badge">Alpha</span>
-                            <div class="product-card__icon">C</div>
-                            <h2 class="product-card__name">Cache</h2>
-                            <p class="product-card__tagline">Your second brain for knowledge</p>
-                            <p class="product-card__desc">Capture, organize and retrieve information effortlessly. Cache helps you remember what matters, when it matters.</p>
-                            <ul class="product-card__features">
-                                <li>Smart knowledge capture</li>
-                                <li>Instant retrieval</li>
-                                <li>Connected notes</li>
-                                <li>API integrations</li>
-                            </ul>
-                            <div class="product-card__actions">
-                                <a href="/en/cache.html" class="btn btn--primary">Learn more</a>
-                                <a href="/en/cache.html#demo" class="btn btn--outline">Try the demo</a>
-                            </div>
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-inkomend.png" alt="Inkomende facturen">
+                            <div class="screenshot-slide__caption">Email invoice forwarding</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-slide">
+                            <img src="/static/screenshots/dash/dash-btw.png" alt="BTW-overzicht">
+                            <div class="screenshot-slide__caption">VAT overview</div>
                         </div>
                     </div>
                 </div>
@@ -127,13 +124,13 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('#product-swiper', {
+    new Swiper('#dash-screenshots', {
         slidesPerView: 1,
         spaceBetween: 24,
         loop: true,
         autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+            delay: 4000,
+            disableOnInteraction: true,
             pauseOnMouseEnter: true,
         },
         pagination: {
@@ -144,33 +141,84 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 32,
-            },
-        },
     });
 });
 </script>
 
-<!-- About -->
+<!-- Features grid -->
 <section class="section section--accent">
     <div class="container">
-        <div class="about">
-            <div class="about__text">
-                <div class="section__label">Siskin Labs</div>
-                <h2 class="section__title">Built in Amsterdam</h2>
-                <p>Siskin Labs is an independent software studio based in Amsterdam. We build tools that are fast, focused, and respectful of your data.</p>
+        <div class="features-grid features-grid--visual">
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-uren.png" alt="Urenregistratie">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Time tracking</h3>
+                    <p class="feature-card__desc">Log hours per project with a clean weekly view. Import from Toggl with one click.</p>
+                </div>
             </div>
-            <div class="about__visual">
-                <img src="/static/siskin-logo.png" alt="Siskin Labs">
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-facturen.png" alt="Facturatie">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Invoicing</h3>
+                    <p class="feature-card__desc">Create and send professional PDF invoices. Track payment status at a glance.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-inkomend.png" alt="Inkomende facturen">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Email invoice forwarding</h3>
+                    <p class="feature-card__desc">Forward invoices to your personal inbox address. PDF attachments are scanned with OCR, plain-text invoices are parsed automatically. No manual data entry.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual">
+                <div class="feature-card__image">
+                    <img src="/static/screenshots/dash/crops/crop-btw.png" alt="BTW-overzicht">
+                </div>
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">VAT overview</h3>
+                    <p class="feature-card__desc">Get a clear overview of VAT to collect and pay. Ready for your quarterly filing.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual feature-card--text-only">
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Client management</h3>
+                    <p class="feature-card__desc">Manage clients, projects, and rate types in one place.</p>
+                </div>
+            </div>
+            <div class="feature-card feature-card--visual feature-card--text-only">
+                <div class="feature-card__body">
+                    <h3 class="feature-card__title">Privacy-first</h3>
+                    <p class="feature-card__desc">Your data stays yours. Self-hosted in Europe, no tracking, full GDPR export.</p>
+                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Mobile preview -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title" style="margin-bottom: 2.5rem;">Always at hand</h2>
+        <div class="mobile-previews">
+            <img src="/static/screenshots/dash/dash-mockup-uren.png" alt="Dash mobile uren">
+            <img src="/static/screenshots/dash/dash-mockup-facturen.png" alt="Dash mobile facturen">
+            <img src="/static/screenshots/dash/dash-mockup-inkomend.png" alt="Dash mobile inkomend">
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--accent">
+    <div class="container" style="text-align: center; max-width: 560px;">
+        <h2 class="section__title">Get access</h2>
+        <p class="section__subtitle" style="margin: 0.75rem auto 2rem;">Dash is currently in private alpha. Join the waitlist to get early access.</p>
+        <a href="/en/waitlist.html" class="hero__cta">Join Waitlist</a>
     </div>
 </section>
 
@@ -187,8 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="footer__col">
                         <h4>Products</h4>
                         <a href="/en/dash.html">Dash</a>
-                        <a href="/en/perch.html">Perch</a>
-                        <a href="/en/cache.html">Cache</a>
                     </div>
                     <div class="footer__col">
                         <h4>Company</h4>
