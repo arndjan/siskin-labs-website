@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Newsletters — Admin | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <div>
+                <h1 class="section__title">Newsletters</h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">{{ subscribers_count }} confirmed subscriber{{ 's' if subscribers_count != 1 else '' }}</p>
+            </div>
+            <a href="/admin/newsletters/new" class="btn btn--primary">New newsletter</a>
+        </div>
+
+        {% if newsletters %}
+        <div class="newsletter-list">
+            {% for nl in newsletters %}
+            <a href="/admin/newsletters/{{ nl.id }}" class="newsletter-item">
+                <div class="newsletter-item__header">
+                    <span class="newsletter-item__status newsletter-item__status--{{ nl.status }}">{{ nl.status }}</span>
+                    <span class="newsletter-item__date">{{ nl.created_at[:10] }}</span>
+                </div>
+                <div class="newsletter-item__subject">{{ nl.subject_en }}</div>
+                <div class="newsletter-item__subject-nl">{{ nl.subject_nl }}</div>
+                {% if nl.status == 'sent' %}
+                <div class="newsletter-item__meta">Sent to {{ nl.sent_count }} subscriber{{ 's' if nl.sent_count != 1 else '' }} on {{ nl.sent_at[:10] if nl.sent_at else '' }}</div>
+                {% endif %}
+                <div class="newsletter-item__target">Target: {{ nl.target }}</div>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+            <p>No newsletters yet.</p>
+            <a href="/admin/newsletters/new" class="btn btn--outline" style="margin-top: 1rem;">Create your first newsletter</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+    .newsletter-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .newsletter-item {
+        display: block; padding: 1.25rem; border: 1px solid var(--border);
+        border-radius: var(--radius); text-decoration: none; color: var(--text);
+        transition: all var(--transition);
+    }
+    .newsletter-item:hover { border-color: var(--border-accent); box-shadow: var(--shadow); }
+    .newsletter-item__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+    .newsletter-item__status {
+        font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem;
+        border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .newsletter-item__status--draft { background: #f3f4f6; color: #6b7280; }
+    .newsletter-item__status--scheduled { background: #fef3c7; color: #92400e; }
+    .newsletter-item__status--sent { background: #d1fae5; color: #065f46; }
+    .newsletter-item__date { font-size: 0.8rem; color: var(--text-light); }
+    .newsletter-item__subject { font-weight: 700; font-size: 1.05rem; }
+    .newsletter-item__subject-nl { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.15rem; }
+    .newsletter-item__meta { font-size: 0.8rem; color: var(--text-light); margin-top: 0.35rem; }
+    .newsletter-item__target { font-size: 0.75rem; color: var(--text-light); margin-top: 0.25rem; }
+</style>
+{% endblock %}

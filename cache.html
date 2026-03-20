@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Cache — {{ t('cache_tagline') }} | Siskin Labs{% endblock %}
+{% block description %}{{ t('cache_hero_subtitle') }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <span class="status status--alpha"><span class="status__dot"></span> Private Alpha</span>
+        <h1 class="hero__title">{{ t('cache_hero_title') }}</h1>
+        <p class="hero__subtitle">{{ t('cache_hero_subtitle') }}</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#demo" class="hero__cta">{{ t('try_demo') }}</a>
+            <a href="/waitlist" class="btn btn--outline btn--large">{{ t('cache_access_title') }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="section section--accent">
+    <div class="container">
+        <div class="section__label">Cache</div>
+        <h2 class="section__title">{{ t('cache_vision_title') }}</h2>
+        <div style="margin-bottom: 1.5rem;"></div>
+        <ul class="vision-list">
+            <li>{{ t('cache_vision_1') }}</li>
+            <li>{{ t('cache_vision_2') }}</li>
+            <li>{{ t('cache_vision_3') }}</li>
+            <li>{{ t('cache_vision_4') }}</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Demo -->
+<section id="demo" class="section section--accent">
+    <div class="container">
+        <div class="demo-box">
+            <h2 class="demo-box__title">{{ t('cache_demo_title') }}</h2>
+            <p class="demo-box__text">{{ t('cache_demo_text') }}</p>
+            <a href="https://siskin-cache.fly.dev/demo" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+                {{ t('cache_demo_btn') }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container" style="text-align: center;">
+        <h2 class="section__title">{{ t('cache_access_title') }}</h2>
+        <p class="section__subtitle" style="margin: 0.5rem auto 1.5rem;">{{ t('cache_access_text') }}</p>
+        <a href="/waitlist" class="btn btn--primary btn--large">{{ t('nav_waitlist') }}</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,22 @@
+[Unit]
+Description=Siskin Labs API (waitlist + subscribe)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/siskin-labs
+Environment=WEBSITE_DB_PATH=/data/siskin-labs/website.db
+Environment=BASE_URL=https://labs.siskin.amsterdam
+Environment=SMTP_HOST=
+Environment=SMTP_PORT=587
+Environment=SMTP_USER=
+Environment=SMTP_PASS=
+Environment=FROM_EMAIL=hello@siskin.amsterdam
+ExecStart=/srv/siskin-labs/venv/bin/uvicorn api:app --host 127.0.0.1 --port 8082
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

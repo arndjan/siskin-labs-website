@@ -1,0 +1,13 @@
+labs.siskin.amsterdam {
+    # API endpoints -> Python backend
+    handle /api/* {
+        reverse_proxy localhost:8082
+    }
+
+    # Static site
+    handle {
+        root * /srv/siskin-labs/dist
+        try_files {path} {path}/index.html {path}.html
+        file_server
+    }
+}

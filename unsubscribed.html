@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('unsubscribed_title') }} | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container container--narrow" style="text-align: center;">
+        {% if removed %}
+        <h1 class="hero__title">{{ t('unsubscribed_title') }}</h1>
+        <p class="hero__subtitle">{{ t('unsubscribed_text') }}</p>
+        {% else %}
+        <h1 class="hero__title">{{ t('unsubscribed_invalid') }}</h1>
+        {% endif %}
+        <a href="/" class="btn btn--outline btn--large" style="margin-top: 1rem;">{{ t('nav_home') }}</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('subscribe_confirmed_title') if confirmed else t('subscribe_invalid_token') }} | Siskin Labs{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container container--narrow" style="text-align: center;">
+        {% if confirmed %}
+        <h1 class="hero__title">{{ t('subscribe_confirmed_title') }}</h1>
+        <p class="hero__subtitle">{{ t('subscribe_confirmed_text') }}</p>
+        <a href="/" class="btn btn--primary btn--large" style="margin-top: 1rem;">{{ t('nav_home') }}</a>
+        {% else %}
+        <h1 class="hero__title">{{ t('subscribe_invalid_token') }}</h1>
+        <a href="/subscribe" class="btn btn--outline btn--large" style="margin-top: 1rem;">{{ t('subscribe_submit') }}</a>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

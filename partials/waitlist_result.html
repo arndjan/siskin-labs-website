@@ -1,0 +1,9 @@
+{% if success %}
+<div class="waitlist-result waitlist-result--success">
+    {{ message }}
+</div>
+{% else %}
+<div class="waitlist-result waitlist-result--{% if 'already' in message or 'al op' in message %}info{% else %}error{% endif %}">
+    {{ message }}
+</div>
+{% endif %}

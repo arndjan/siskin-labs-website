@@ -188,12 +188,12 @@ TRANSLATIONS = {
 
     # --- Dash product page ---
     "dash_hero_title": {
-        "en": "Less admin, more work",
-        "nl": "Minder administratie, meer werk",
+        "en": "Look at you go",
+        "nl": "Het draait lekker",
     },
     "dash_hero_subtitle": {
-        "en": "Dash handles your invoicing, expenses, and VAT so you can focus on what you do best. Forward your invoices by email — Dash does the rest.",
-        "nl": "Dash regelt je facturatie, kosten en BTW zodat jij je kunt richten op waar je goed in bent. Forward je facturen per email — Dash doet de rest.",
+        "en": "Hours logged, invoices sent, payments coming in. Dash shows you the pulse of your freelance business — and it feels great.",
+        "nl": "Uren gemaakt, facturen verstuurd, betalingen binnen. Dash laat je de hartslag van je bedrijf voelen — en dat voelt goed.",
     },
     "dash_how_title": {"en": "How it works", "nl": "Hoe het werkt"},
     "dash_how_1": {
@@ -237,7 +237,7 @@ TRANSLATIONS = {
     "dash_feat_clients": {"en": "Client management", "nl": "Klantenbeheer"},
     "dash_feat_clients_desc": {
         "en": "Manage clients, projects, and rate types in one place.",
-        "nl": "Beheer klanten, projecten en tarieftypes op een plek.",
+        "nl": "Beheer klanten, projecten en tarieftypes op één plek.",
     },
     "dash_feat_share": {"en": "Client portals", "nl": "Klantportalen"},
     "dash_feat_share_desc": {
@@ -248,6 +248,10 @@ TRANSLATIONS = {
     "dash_feat_privacy_desc": {
         "en": "Your data stays yours. Self-hosted in Europe, no tracking, full GDPR export.",
         "nl": "Jouw data blijft van jou. Gehost in Europa, geen tracking, volledige GDPR-export.",
+    },
+    "dash_mobile_title": {
+        "en": "Always at hand",
+        "nl": "Altijd bij de hand",
     },
     "dash_demo_title": {"en": "Try Dash", "nl": "Probeer Dash"},
     "dash_demo_text": {
