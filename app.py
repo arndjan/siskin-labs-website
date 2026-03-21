@@ -2,7 +2,7 @@
 
 import os
 import re
-from fastapi import FastAPI, Request, Form, Depends, HTTPException
+from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -171,7 +171,6 @@ async def subscribe_submit(
 
 @app.get("/subscribe/confirm/{token}", response_class=HTMLResponse)
 async def subscribe_confirm(request: Request, token: str):
-    lang = detect_language(request)
     confirmed = confirm_subscriber(token)
     return templates.TemplateResponse(
         "subscribe_confirmed.html",
@@ -181,7 +180,6 @@ async def subscribe_confirm(request: Request, token: str):
 
 @app.get("/unsubscribe/{token}", response_class=HTMLResponse)
 async def unsubscribe_page(request: Request, token: str):
-    lang = detect_language(request)
     removed = unsubscribe(token)
     return templates.TemplateResponse(
         "unsubscribed.html",

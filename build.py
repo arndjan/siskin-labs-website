@@ -6,12 +6,11 @@ Output goes to dist/ directory.
 Usage: python build.py
 """
 
-import os
 import shutil
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
-from i18n import TRANSLATIONS, t as _t
+from i18n import t as _t
 
 # Configuration
 REPO_DIR = Path(__file__).parent
@@ -53,7 +52,7 @@ def build():
 
     # Copy static files
     shutil.copytree(STATIC_DIR, DIST_DIR / "static")
-    print(f"Copied static/ -> dist/static/")
+    print("Copied static/ -> dist/static/")
 
     # Set up Jinja2 environment
     env = Environment(
@@ -109,7 +108,7 @@ def build():
         '</html>\n',
         encoding="utf-8",
     )
-    print(f"  index.html (redirect -> /nl/)")
+    print("  index.html (redirect -> /nl/)")
 
     print(f"\nBuild complete! Output in {DIST_DIR}/")
 
