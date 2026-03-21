@@ -1,4 +1,4 @@
-name: Deploy to Fly.io
+name: Deploy to Hetzner
 
 on:
   push:
@@ -35,8 +35,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 204.168.138.46 >> ~/.ssh/known_hosts
 
-      - run: flyctl deploy --remote-only
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Deploy static site
+        run: rsync -avz --delete dist/ root@204.168.138.46:/srv/siskin-labs/dist/
+
+      - name: Deploy API
+        run: |
+          rsync -avz \
+            api.py database.py mail.py i18n.py requirements-api.txt \
+            root@204.168.138.46:/srv/siskin-labs/
+          ssh root@204.168.138.46 "/srv/siskin-labs/venv/bin/pip install -r /srv/siskin-labs/requirements-api.txt -q && systemctl restart siskin-labs-api"
